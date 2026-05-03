@@ -58,6 +58,11 @@ nav a {
   font-weight: bold;
 }
 
+nav a.active {
+  color: white;
+  text-decoration: underline;
+}
+
 nav {
   display: flex;
   justify-content: center;
