@@ -1,22 +1,44 @@
 /* Targets ALL sections */
 .section {
   padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
   margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Targets ONE specific section */
-#home {
-  background-color: #1a1a2e;
-  color: white;
+main {
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-#about-me {
-  background-color: #f9f9f9;
+@media (max-width: 600px) {
+  
+  .section {
+    padding: 24px 16px;  /* Less padding on small screens */
+  }
+
+  header {
+    padding: 24px 16px;
+  }
+
+  #about-me img {
+    width: 112px;
+    height: 112px;        /* Smaller image on mobile */
+  }
+
+  #skills ul {
+    flex-wrap: wrap;      /* Pills wrap to next line instead of overflow */
+  }
+
+  nav {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 8px;
+  }
 }
 
 header {
-  background-color: #1a1a2e;
+  background-color: #1482a9;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -30,18 +52,17 @@ body {
   color: #333;
 }
 
-.section {
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  border-bottom: 1px solid #ddd;
-}
-
 nav a {
-  color: #a0c4ff;
-  margin: 0 10px;
+  color: #f6925d;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 16px;
 }
 
 nav a:hover {
@@ -50,11 +71,40 @@ nav a:hover {
 }
 
 #about-me {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#about-me img {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;        /* 👈 Add this line */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  border: 4px solid #e4e4e4;
 }
 
 #skills {
   background-color: #eef2ff;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+#skills li {
+  background-color: #1482a9;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 #my-goal {
