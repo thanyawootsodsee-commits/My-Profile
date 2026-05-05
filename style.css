@@ -9,6 +9,8 @@
   --goal-bg: #fff8e1;
   --contact-bg: #f0fdf4;
   --projects-bg: #f0f7ff;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 body.dark {
@@ -37,12 +39,33 @@ body.dark {
 
 /* ======= BASE ======= */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.4s ease, color 0.4s ease; /* 👈 merged */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+a {
+  color: #1482a9;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #f6925d;
 }
 
 main {
@@ -60,12 +83,24 @@ header {
 
 header h1 {
   animation: slideDown 0.8s ease forwards;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -1px;   /* Tight spacing for big headings */
 }
+
 
 header h2 {
   animation: slideDown 0.8s ease 0.2s forwards;
   opacity: 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--font-body);   /* Subtitle uses body font */
+  opacity: 0.85;
+  margin: 0;
+  letter-spacing: 2px;             /* Wide spacing for subtitles */
 }
+
 
 /* ======= NAV ======= */
 nav {
@@ -102,6 +137,24 @@ nav a.active {
 .section:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  position: relative;
+}
+
+/* Underline accent on section titles */
+.section h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #f6925d;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 #about-me  { background-color: var(--about-bg); }
@@ -266,6 +319,7 @@ nav a.active {
 }
 
 .project-card h3 {
+  font-size: 20px;
   margin: 0 0 8px;
   color: #1482a9;
 }
