@@ -25,29 +25,27 @@
       </header>
 
       <main>
-        <section class="section" id="about-me">
-          <h2>About Me</h2>
-          <p>I am learning HTML and want to become a frontend developer.</p>
-          <img 
-            src="images/Image.png" 
-            alt="My profile picture"
-          >
-        </section>
+      <section class="section" id="about-me">
+        <h2 class="reveal">About Me</h2>
+<p class="reveal delay-1">I am learning HTML and want to become a frontend developer.</p>
+        <img src="images/Image.png" alt="My profile picture" class="reveal delay-2">
+      </section>
 
-        <section class="section" id="skills">
-          <h2>Skills</h2>
-          <ul>
+      <section class="section" id="skills">
+        <h2 class="reveal">Skills</h2>
+          <ul class="reveal delay-1">
             <li>UI/UX Design</li>
             <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
           </ul>
-        </section>
+      </section>
 
-        <section class="section" id="projects">
-          <h2>Projects</h2>
+      <section class="section" id="projects">
+          <h2 class="reveal">Projects</h2>
           <div class="projects-grid">
-
-            <div class="project-card">
-              <div class="project-icon">🌐</div>
+            <div class="project-card reveal-left delay-1">
+            <div class="project-icon">🌐</div>
               <h3>Portfolio Website</h3>
               <p>A responsive portfolio built with HTML, CSS & JavaScript.</p>
               <div class="project-tags">
@@ -57,7 +55,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal delay-2">
               <div class="project-icon">🎨</div>
               <h3>UI Design System</h3>
               <p>A collection of reusable UI components with dark mode support.</p>
@@ -67,7 +65,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal-right delay-3">
               <div class="project-icon">📱</div>
               <h3>Coming Soon</h3>
               <p>Next project in progress... stay tuned!</p>
@@ -77,22 +75,22 @@
             </div>
 
           </div>
-        </section>
+        </section>  
 
         <section class="section" id="my-goal">
-          <h2>My Goal</h2>
-          <p>My goal is to build real web applications.</p>
+          <h2 class="reveal">My Goal</h2>
+          <p class="reveal delay-1">My goal is to build real web applications.</p>
         </section>
 
         <section class="section" id="contact">
-          <h2>Contact</h2>
-          <p>Email me at 
+          <h2 class="reveal">Contact</h2>
+          <p class="reveal delay-1">Email me at 
             <a href="mailto:thanyawoot.sodsee@gmail.com">
               thanyawoot.sodsee@gmail.com
             </a>
           </p>
 
-          <form id="contact-form">
+          <form id="contact-form" class="reveal delay-2">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" placeholder="Your name" />
@@ -111,7 +109,7 @@
               <span class="error" id="message-error"></span>
             </div>
 
-            <button type="submit" id="form-submit">Send Message</button>
+            <button type="submit" id="form-submit" class="reveal delay-1">Send Message</button>
             <p id="form-success" style="display:none;">
               ✅ Message sent! I'll get back to you soon.
             </p>
